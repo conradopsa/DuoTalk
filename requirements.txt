@@ -1,0 +1,7 @@
+deep-translator==1.11.4
+en_core_web_sm-3.8.0-py3-none-any.whl
+mutagen==1.47.0
+spacy==3.8.5
+pydub
+torch
+torchaudio

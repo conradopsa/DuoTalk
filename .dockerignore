@@ -1,0 +1,6 @@
+audios/
+env/
+examples/
+README.md
+Dockerfile
+.shared/

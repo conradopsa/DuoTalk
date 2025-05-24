@@ -7,6 +7,10 @@ conda create --name duotalk python=3.11
 
 conda activate duotalk
 
+pip install -r requirements.txt
+
+python ./src
+
 # Build image
 docker build -t tts .
 

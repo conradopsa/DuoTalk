@@ -3,6 +3,10 @@
 ## Getting Started
 
 ``` shell
+conda create --name duotalk python=3.11
+
+conda activate duotalk
+
 # Build image
 docker build -t tts .
 

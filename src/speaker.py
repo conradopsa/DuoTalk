@@ -13,7 +13,7 @@ print(TTS().list_models())
 
 tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2", progress_bar=True).to(device)
 
-def generate_tts(text, filename, lang, speaker, speed, silence_between):
+def generate_tts(text, filename, lang, speaker, speed, silence_left, silence_right):
     if os.path.isfile(filename):
         return "skipped"
 
@@ -30,15 +30,15 @@ def generate_tts(text, filename, lang, speaker, speed, silence_between):
             speed=speed,
             split_sentences=False
         )
-
         
         audio = AudioSegment.from_wav(wav_filename)
 
         # Creating silence
-        silence = AudioSegment.silent(duration=silence_between)
+        silence_left_audio = AudioSegment.silent(duration=silence_left)
+        silence_right_audio = AudioSegment.silent(duration=silence_right)
 
         # Convert WAV to MP3 and Adding silence to fhe final
-        (audio + silence).export(filename, format="mp3")
+        (silence_left_audio + audio + silence_right_audio).export(filename, format="mp3")
 
         print("filename filename filename "+ filename)
         

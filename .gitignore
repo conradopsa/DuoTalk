@@ -1,4 +1,4 @@
 audios/
 env/
 .shared/
-samples/conrado.wav
+samples/.*.wav

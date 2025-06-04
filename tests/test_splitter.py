@@ -35,9 +35,26 @@ class TestSplitTextAdvanced(unittest.TestCase):
     #     result = split_text_advanced(text)
     #     self.assertEqual(result, ["Sorry, Mr. Freeman, I’ve got explicit orders not to", "let you through without your hazard suit on"])
 
+
     def test_negative_sentence(self):
         text = """
         Sorry, Mister Freeman, I’ve got explicit orders not to let you through without your hazard suit on.
         """
         result = split_text_advanced(text)
-        self.assertEqual(result, ["Sorry, Mister Freeman, I’ve got explicit orders not to", "let you through without your hazard suit on"])
+        self.assertEqual(result, ["Sorry, Mister Freeman, I’ve got explicit orders not", "to let you through without your hazard suit", "on"])
+
+    def test_jill_Valentine_it_was_raccoon_city(self):
+        text ="""
+        Jill Valentine: It was Raccoon City’s last chance... and my last chance... 
+        My last escape.
+        """
+
+        expect = [
+            "Jill Valentine: It was Raccoon City’s last chance", 
+            "and my last chance",
+            "My last escape"
+        ]
+
+        result = split_text_advanced(text)
+        self.assertEqual(result, expect)
+

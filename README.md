@@ -6,7 +6,8 @@ After generated your audios, transfer files to your phone and activate the lyric
 
 Its recommended to use Musicolet App for Android, see below:
 
-![Demo Musicolet](demo_musicolet.mp4)
+https://github.com/user-attachments/assets/115ae197-0d21-470b-a5b5-6bfafe26f80f
+
 
 ## Getting Started
 ``` shell

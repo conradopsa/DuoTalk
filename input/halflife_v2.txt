@@ -1,8 +1,8 @@
-AUDIO SCRIPT FOR
-HALF-LIFE
+AUDIO SCRIPT FOR HALF-LIFE
 
-TRAIN RIDE
-TRAIN VOICE (VOICE OVER)
+TRAIN RIDE 
+
+TRAIN VOICE
 Good morning and welcome to the Black Mesa Transit System. This automated train is provided for the security and convenience of employees of the Black Mesa Research Facility personnel. Please feel free to move about the train or simply sit back and enjoy the ride.
 The time is 8:47 a.m. Current topside temperature is 93 degrees, with an estimated high of one hundred and five. The Black Mesa compound is maintained at a pleasant 68 degrees at all times.
 This train is inbound from Level 3 dormitories to Sector C Test Labs and Control Facilities. If your intended destination is a high-security area beyond Sector C, you will need to return to the Central Transit hub in Area 9 and board a high-security train. If you have not yet submitted your identity to the retinal clearance system, you must report to Black Mesa Personnel for processing before you will be permitted into the high-security branch of the transit system.

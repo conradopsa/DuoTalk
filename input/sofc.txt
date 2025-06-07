@@ -1,0 +1,189 @@
+Prologue
+A young man named Wander travels up a mountain astride his horse Agro, carrying with him a cloaked, lifeless body. He comes to a giant bridge extending across a vast and desolate land, connecting the side of the mountain to the top of a large shrine. As he arrives at the building, its door slides up, revealing an enormous spiraling ramp leading to the ground level, and shuts again as Wander passes under it. At the bottom of the ramp is a pool of water, and an entrance to the main chamber. There, sixteen statues line the walls, eight on either side. At the far end of the area is an altar, upon which Wander places the body. He pulls the cloak aside, revealing a woman, Mono, of roughly the same age as him, garbed in a bright white dress. The scene transitions to a shaman mask floating in a stormy sky.
+
+Man: That place... began from the resonance of intersecting points... They are memories replaced by ens and naught and etched into stone. Blood, young sprouts, sky--and the one with the ability to control beings created from light... In that world, it is said that if one should wish it one can bring back the souls of the dead... ...But to trespass upon that land is strictly forbidden...
+Several shadowed, human-like figures climb out of the ground and approach Wander, prompting him to draw his sword. As Light reflects off of the blade, the creatures retreat, and a voice booms from the large hole in the ceiling.
+
+Dormin: Hmm? Thou possesses the Ancient Sword? So thou art mortal...
+Wander: Are you Dormin? I was told that in this place at the end of the world--there exists a being who can control the souls of the dead.
+Dormin: Thou art correct... We are the one known as Dormin...
+Wander turns to the woman.
+
+Wander: She was sacrificed for she has a cursed fate. Please, I need you to bring back her soul...
+Dormin laughs.
+
+Dormin: That maiden's soul? Souls that are once lost cannot be reclaimed... Is that not the law of mortals? With that sword, however... it may not be impossible.
+Wander: Really?!
+Dormin: That is of course, if thou manage to accomplish what We askest.
+Wander: What do I have to do?
+Dormin: Behold the idols that stand along the wall... Thou art to destroy all of them. But those idols cannot be destroyed by the mere hands of a mortal...
+Wander: Then what am I to do?
+Dormin: In this land there exist colossi that are the incarnations of those idols. If thou defeat those colossi--the idols shall fall.
+Wander: I understand.
+Dormin: But heed this, the price you pay may be heavy indeed.
+Wander: It doesn't matter.
+Dormin: Very well... Raise thy sword by the light... and head to the place where the sword's light gathers... There, thou shalt find the colossi thou art to defeat.
+
+Colossus 01
+This human-like Colossus walks out from behind a cliff.
+
+Dormin: 1: Hold up thy sword to reflect the light onto the colossus. Its vitals shall be revealed...
+As the Colossus is defeated and falls to the ground, black tentacles shoot out of its body. They swirl about in the air, before crashing down and piercing Wander's chest, causing him to collapse. The player is shown a white ball of light, surrounded by symbols. A series of unintelligible sounds play, and the light fades to show Wander lying on the ground in the Shrine of Worship. One of the shadowed figures stands over Wander, and disappears as he regains consciousness. Wander stands and approaches Mono, but turns back as he hears rumbling, and sees the slain Colossus's statue break apart.
+
+Colossus 02
+Wander turns to the hole in the ceiling of the shrine.
+
+Dormin: Thy next foe is... In the seaside cave... It moves slowly... Raise thy courage to defeat it.
+The stone door beneath the side of a nearby cliff is broken apart by this four-legged Colossus.
+
+Dormin: 1: The place that emits light is its vitals...
+This time, there are two shadows standing by Wander. Their number continues to increase with each defeated Colossus.
+
+Colossus 03
+Dormin: Thy next foe is... A giant canopy soars to the heavens... The anger of the sleeping giant shatters the earth...
+This Colossus appears as a pile of rubble from the distance, but stands as it is approached to show its humanoid form. It wields a sword.
+
+Dormin: 1: The armor it wears seems brittle...
+Colossus 04
+Dormin: Thy next foe is... In the land of the vast green fields... Rows of guiding graves... It is giant indeed but fearful, it is not.
+This Colossus resembles a horse.
+
+Dormin: 1: One strategy to consider is to hide thyself underground...
+2: Trickst it to reach its back...
+As Wander awakens in the shrine, he pets Agro.
+
+Colossus 05
+Dormin: The next foe is... It casts a colossal shadow across a misty lake as it soars through the sky... To reach it is no easy task...
+This bird-like Colossus appears above a lake.
+
+Dormin: 1: Use thy bow and arrow to gain the colossus's attention...
+2: Stand on the platform on the surface of the lake to draw its attack...
+Colossus 06
+Dormin: Thy next foe is... A giant lurks underneath the temple... It lusts for destruction... But a fool, it is not.
+A face-shaped part of a nearby wall lowers to reveal this humanoid Colossus.
+
+Dormin: 1: Find a place where thou art hidden...
+Colossus 07
+Dormin: Thy next foe is... A ruin hidden in the lake... A ripple of thunder lurks underwater...
+This serpentine Colossus resides in a deep lake. Electrically-charged spikes extend from its back.
+
+Dormin: 1: Swim on the lake surface to draw out the colossus...
+Colossus 08
+Dormin: Thy next foe is... A tail trapped within a pail deep within the forest... A shadow that crawls on the walls.
+This gecko-like Colossus is found in a tall colisseum.
+
+Dormin: 1: Find a way to seal its quick movement...
+In the style of a black and white film, Mono is seen sitting up and motioning to Wander. The design fades, and she is again lying motionless. Wander rises from the ground and approaches her to caress her face.
+
+Colossus 09
+Dormin: Thy next foe is... The land where trees nary grow... It sleeps in a dry lake bed... A rude awakening.
+This turtle-like Colossus breaks through a cave wall in a dark field of geysers.
+
+Dormin: 1: The power of the earth shall shake even a colossus...
+2: Aim for the legs that support the body of the floating colossus...
+Colossus 10
+Dormin: Thy next foe is... An isolated sand dune... Its tracks are well hidden... Shaking the earth, its gaze is upon thee...
+This serpentine Colossus darts through the sand within a cave.
+
+Dormin: 1: Thy legs cannot possibly carry thee away from its dangers...
+Colossus 11
+Dormin: Thy next foe is... An alter overlooks the lake... A guardian set loose... It keeps the flames alive.
+This dog-like Colossus, which is actually only a few times larger than Wander, is found in a small shrine at the bottom of a gorge.
+
+Dormin: 1: It fears the flames...
+2: Perhaps thou can use the flame pedestal...
+Colossus 12
+Dormin: Thy next foe is... Paradise floats upon the lake... A silent being wields thunder... A moving bridge to cross to higher ground.
+This turtle-like Colossus is found in a lake.
+
+Dormin: 1: Thou cannot aim for its vitals as thou art now...
+A man, Emon, wearing the mask seen in the prologue rides with five other men on horseback. They come to a cliff where the Shrine of Worship is visible.
+
+Emon: Only a little more to go.
+Colossus 13
+Dormin: Thy next foe is... The vast desert lands... A giant trail drifts through the sky... Thou art not alone...
+This worm-like Colossus flies out of the sands of a desert.
+
+Dormin: 1: The power of the sword will not get thou close to it...
+Colossus 14
+Dormin: Thy next foe is... A guardian set loose... A closed off city beyond the channel... It lusts for destruction...
+This Colossus, identical in appearance to the eleventh, is found in a large set of ruins. It jumps down a large staircase and charges at Wander.
+
+Dormin: 1: Climb the tower to draw the colossus's anger...
+Colossus 15
+Dormin: Thy next foe is... A giant has fallen into the valley... It acts as a sentry to a destroyed city...
+As Wander draws near a cliff at the edge of a colisseum, this humanoid Colosus reaches up and pulls itself into the arena.
+
+Dormin: 1: A fight on the ground is unfavorable. Find a place where thou hast an advantage...
+2: Find much higher ground...
+3: Find its hidden vitals...
+Colossus 16
+Dormin: Finally, the last colossus... The ritual is nearly over... Thy wish is nearly granted... But someone now stands to get in thy way... Make haste, for time is short...
+A bridge connects the last Colossus's residence to a nearby cliff. As Wander rides across the bridge on Agro, it begins to collapse. Before sliding off of the falling debris, Agro throws Wander to safety.
+
+Wander: Agro!!
+Agro and the pieces of the bridge crash into the river below.
+
+This humanoid Colossus, large even compared to the others, is bound in place at the northern edge of the land, within an area that appears to have been designed for warfare.
+
+Dormin: 
+1: There should be a place where thee can approach whilst hiding...
+2: Its response will be thy road...
+3: Thou cannot reach its vitals in the place where thou art...
+
+Epilogue
+Shrine of Worship
+Emon and his followers ride across the massive bridge to the Shrine, opening the sealed door at the end. Inside, Emon slides his mask back down over his face, having previously lifted it up. The group of six descend the ramp, and arrive at the main chamber. Soon, the entire room begins to shake.
+
+Follower: Lord Emon!
+Emon turns to the last of the Colossus' idols, right as it explodes.
+
+Emon: No...
+He notices Mono at the other side of the room.
+
+Emon: Hmm?
+He takes off his mask as he looks to the altar. The camera shifts to Mono, then whites out.
+
+By the 16th Colossus
+Wander is lying on the ground in front of the now-felled Colossus. He starts to move as the camera pans up, and reappears in the Shrine.
+
+Shrine of Worship
+By the altar, Emon is performing a chant over Mono's body. In the middle of it, though, he stops and turns around; Wander has appeared in the room. His sword spirals through the air as Wander loses his grip of it, now incredibly weak and exhausted; his face is pale-white, his voice has become strained, and two small horns now protrude from his head.
+
+Emon: I don't believe this... So it was you after all. Have you any idea what you've done?! Not only did you steal the sword and trespass upon this cursed land, you used the forbidden spell as well...
+Two of Emon's followers walk towards Wander.
+
+Emon: To be reduced to such a sight...
+Wander manages to stand up, albeit slowly.
+
+Emon: You were only being used. Eradicate the source of the evil.
+One of the followers readies an arrow. Wander continues to walk, hunched over, with the shadows still behind him.
+
+Emon: Look... He's possessed by the dead. Hurry up and do it!
+The follower launches the arrow into Wander's leg; he falls over, grabbing the leg in pain, but is able to stand up again. A shadow seeps of the wound, beginning to spread out over more of his body.
+
+Emon: It is better to put him out of his misery then to exist, cursed as he is.
+Another follower walks to Wander. He raises his sword above him; hesitating for a mere second, he pierces Wander's chest. Cringing, Wander tries to grab the sword; darkness pours out of the wound, like the Colossi when they were stabbed. The follower backs up; Emon looks surprised. Wander staggers to the altar, reaching out to Mono. He pulls the sword out of his chest; darkness flows out of it, rapidly encasing his body in darkness. Wander drops the sword; it falls to the ground, as does he. The shadows finally reach the tip of his foot, now covering him completely. Emon looks at Mono, but turns back as one of the followers screams. Dormin - appearing as a horned beast the size of the Colossi - emerges from Wander. He speaks, with his female voice absent.
+
+Dormin: Thou severed Our body into sixteen segments for an eternity in order to seal away Our power... We, Dormin, have arisen anew...
+Emon: He's been resurrected...!
+Dormin: We have borrowed the body of this warrior...
+All of the humanlike shadows run into Dormin's body, increasing his size.
+
+Emon: Place a seal over the entire shrine before it's too late!
+The player takes control of Dormin for a brief segment. Emon and his men run to the central shaft of the shrine, and a follower grabs the Ancient Sword on the way.
+
+After the segment ends, Emon and his followers run to the top of the spiral ramp.
+
+Emon: Ready my horse.
+A follower hands Emon the Ancient Sword; he walks to the ledge that sits over the pool of water down below. Emon raises the sword into the air, then throws it downward to the water.
+
+Emon: Be gone fowl beast!
+A bright light shines out of the pool as the sword falls into it, creating a sort of miniature tornado. Emon pauses after the winds blow his mask back, but then turns to leave. Back in the main room, Dormin is being pulled by the wind. As he's pulled, he reverts to Wander's form, but is still covered in pitch-black shadows. Dormin-Wander makes a futile attempt at resisting the wind, but is sucked into the pool. The wind dissipates. Outside, Emon and his followers ride across the bridge, which has now begun to collapse. The camera shifts back inside the Shrine. Mono comes back to life and steps off the altar. Agro comes in from the side stairs, with a limp leg. Mono pets him as he draws near her. The credits start to roll.
+
+The locations of all sixteen Colossi are shown in Reminiscence Mode, after which we see Emon and his followers arrive at the end of the bridge as the rest of it breaks apart.
+
+Emon: Poor ungodly soul... Now, no man shall ever trespass upon this place again. Should you be alive... If it's even possible to continue to exist in these sealed lands... one day, perhaps you will make atonement for what you've done.
+Back at the Shrine of Worship, Mono and Agro walk to the pool of water. Wander, now in the form of a baby, lies on the surface of the water. Mono kneels down to him and picks him up. Mono follows Agro up the spiral ramp. Outside the Shrine, they walk up to the 'Secret Garden' atop the building. Birds chirp throughout the Garden; a deer notices Mono and Agro as they come in. It runs to them, but slows down as it nears Mono. A bird flies out of the Garden; the camera follows it, leaving Mono and Agro out of view. The bird flies across the forbidden land, eventually reaching a dark place accompanied by a raging storm. The camera shoots passed the bird, and the screen goes black.
+
+[text]: END

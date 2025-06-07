@@ -38,8 +38,8 @@ class Speaker:
 
             white_noise = WhiteNoise()
             # Creating silence
-            silence_left_audio = white_noise.to_audio_segment(duration=silence_left).apply_gain(-40)
-            silence_right_audio = white_noise.to_audio_segment(duration=silence_left).apply_gain(-40)
+            silence_left_audio = white_noise.to_audio_segment(duration=silence_left).apply_gain(-80)
+            silence_right_audio = white_noise.to_audio_segment(duration=silence_left).apply_gain(-80)
 
             # Convert WAV to MP3 and Adding silence to fhe final
             (silence_left_audio + audio + silence_right_audio).export(filename, format="mp3")

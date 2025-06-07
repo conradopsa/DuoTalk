@@ -16,7 +16,7 @@ SILENCE_EN_RIGHT = 2000 # ms
 
 SPEED = 0.5 # 1 is normal
 
-def process_sentence(speaker, prefix, i, sentence, length):
+def process_sentence(speaker, speaker_name, prefix, i, sentence, length):
     try:
         if not sentence.strip():
             return f"[skip] Empty sentence at {i}"
@@ -26,7 +26,7 @@ def process_sentence(speaker, prefix, i, sentence, length):
 
         base_filename = f"{dir}/{i:06d}"        
 
-        speaker_path = f"samples/{SPEAKER_DEFAULT}.wav"
+        speaker_path = f"samples/{speaker_name}.wav"
 
         # Translated audio
         translated_file = f"{base_filename}_1_pt.mp3"
@@ -43,17 +43,17 @@ def process_sentence(speaker, prefix, i, sentence, length):
     except Exception as e:
         return f"[error] Frase {i+1} '{sentence}': {e}"
 
-def process_all(prefix, sentences):
+def process_all(prefix, sentences, speaker_name):
     speaker = Speaker()
 
     with ThreadPoolExecutor(max_workers=MAX_CONCURRENCY) as executor:
-        futures = [executor.submit(process_sentence, speaker, prefix, i+1, s, len(sentences)) for i, s in enumerate(sentences)]
+        futures = [executor.submit(process_sentence, speaker, speaker_name, prefix, i+1, s, len(sentences)) for i, s in enumerate(sentences)]
         for future in as_completed(futures):
             print(future.result())
 
-def process_text(text, prefix):
+def process_text(text, prefix, speaker_name):
     sentences = splitter.split_text_advanced(text)
-    process_all(prefix, sentences)
+    process_all(prefix, sentences, speaker_name)
 
 def read_file(filepath):
     """Read and return the contents of a text file."""
@@ -88,13 +88,13 @@ def main():
     args = getArgs()
 
     filepath = args.filepath
-    speaker = args.speaker
+    speaker_name = args.speaker
 
     content = read_file(filepath)
     filename_without_ext = os.path.splitext(os.path.basename(filepath))[0]
     
-    prefix = f"{filename_without_ext}_{speaker}"
+    prefix = f"{filename_without_ext}_{speaker_name}"
 
-    process_text(content, prefix)
+    process_text(content, prefix, speaker_name)
 
 main()

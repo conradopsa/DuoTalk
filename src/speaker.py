@@ -22,16 +22,28 @@ class Speaker:
 
         if not text.strip():
             raise ValueError("Empty text provided to Tortoise TTS.")
+        
+        # fixing xtts model bug in portuguese (model speak "ponto" on the final of every speak)
+        if lang == "pt" and text.endswith('.'):
+            text = text[:-1]
 
         try:
             wav_filename = filename+".wav" 
+            
             self.tts.tts_to_file(
                 text=text, 
                 speaker_wav=speaker, 
                 language=lang, 
                 file_path=wav_filename, 
                 speed=speed,
-                split_sentences=False
+                split_sentences=False,
+                temperature=0.2, # default = 0.65
+                repetition_penalty=6.0, # default = 2.0
+                length_penalty=0.5, # default = 1.0
+                # top_p=0.8, # default = 0.8
+                # top_k=20, # default = 50
+                enable_text_splitting=False,
+                num_beams=6
             )
             
             audio = AudioSegment.from_wav(wav_filename)
@@ -39,7 +51,7 @@ class Speaker:
             white_noise = WhiteNoise()
             # Creating silence
             silence_left_audio = white_noise.to_audio_segment(duration=silence_left).apply_gain(-80)
-            silence_right_audio = white_noise.to_audio_segment(duration=silence_left).apply_gain(-80)
+            silence_right_audio = white_noise.to_audio_segment(duration=silence_right).apply_gain(-80)
 
             # Convert WAV to MP3 and Adding silence to fhe final
             (silence_left_audio + audio + silence_right_audio).export(filename, format="mp3")

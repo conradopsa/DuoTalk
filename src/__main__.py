@@ -5,6 +5,7 @@ import lyrics
 import splitter
 import translator
 import argparse
+import mp3
 
 SPEAKER_DEFAULT = "atlas" # "gaia" | "atlas" | "uranos"
 MAX_CONCURRENCY = 1 # Workers
@@ -33,12 +34,13 @@ def process_sentence(speaker, speaker_name, prefix, i, sentence, length):
         translated = translator.translate(sentence)
         status_translated =  speaker.generate_tts(translated, translated_file, 'pt', speaker_path, SPEED, SILENCE_PT_LEFT, SILENCE_PT_RIGHT)
         lyrics.embed(translated, translated_file, 'por')
+        mp3.add_mp3_metadata(translated_file, title=translated, album=prefix, track=i*2-1) 
 
         # Main audio
         main_file = f"{base_filename}_2_en.mp3"
         status_main = speaker.generate_tts(sentence, main_file, 'en', speaker_path, SPEED,  SILENCE_EN_LEFT, SILENCE_EN_RIGHT)
         lyrics.embed(sentence, main_file)
-        
+        mp3.add_mp3_metadata(main_file, title=sentence, album=prefix, track=i*2) 
         return f"[done] prefix={prefix} progress={i}/{length} status=({status_translated}, {status_main})"
     except Exception as e:
         return f"[error] Frase {i+1} '{sentence}': {e}"

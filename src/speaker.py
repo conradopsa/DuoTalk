@@ -3,6 +3,7 @@ from pydub import AudioSegment
 from pydub.generators import WhiteNoise
 import torch
 from TTS.api import TTS
+from silence_detector import remove_ending_silence
 
 class Speaker:
     def __init__(self):
@@ -48,13 +49,15 @@ class Speaker:
             
             audio = AudioSegment.from_wav(wav_filename)
 
+            audioCleaned = remove_ending_silence(audio)
+
             white_noise = WhiteNoise()
             # Creating silence
             silence_left_audio = white_noise.to_audio_segment(duration=silence_left).apply_gain(-80)
             silence_right_audio = white_noise.to_audio_segment(duration=silence_right).apply_gain(-80)
 
             # Convert WAV to MP3 and Adding silence to fhe final
-            (silence_left_audio + audio + silence_right_audio).export(filename, format="mp3")
+            (silence_left_audio + audioCleaned + silence_right_audio).export(filename, format="mp3")
 
             print("filename filename filename "+ filename)
             

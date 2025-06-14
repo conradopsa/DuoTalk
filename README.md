@@ -14,6 +14,8 @@ Obs.: Some USBC to P3 adapter with DAC can cut 2s in each audio start, so prefer
 
 Use [Lollypop](https://wiki.gnome.org/Apps/Lollypop) Player and activate Lyrics.
 
+![image](https://github.com/user-attachments/assets/1747caa6-3140-4f40-b546-f3f53eb40edb)
+
 
 ## Getting Started
 ``` shell

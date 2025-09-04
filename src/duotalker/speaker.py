@@ -3,7 +3,7 @@ from pydub import AudioSegment
 from pydub.generators import WhiteNoise
 import torch
 from TTS.api import TTS
-from silence_detector import remove_ending_silence
+from .silence_detector import remove_ending_silence
 
 class Speaker:
     def __init__(self):

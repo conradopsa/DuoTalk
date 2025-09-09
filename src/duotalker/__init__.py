@@ -3,8 +3,9 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from .speaker import Speaker
 from duotalker import splitter, translator, mp3
 from threading import Lock
+import time
 
-MAX_CONCURRENCY = 50 # Workers
+MAX_CONCURRENCY = 30 # Workers
 
 SILENCE_PT_LEFT = 1500 # ms
 SILENCE_PT_RIGHT = 0 # ms
@@ -13,14 +14,27 @@ SILENCE_EN_RIGHT = 2000 # ms
 
 SPEED = 0.5 # 1 is normal
 
+OUTPUT_FOLDER = "audios"
+
 lock = Lock()
 
-def _process_sentence(speaker, speaker_name, prefix, i, sentence, length):
+def write_performance(start, prefix, totalChars):
+    generation_time = time.time() - start
+
+    dir = f"{OUTPUT_FOLDER}/{prefix}/performance.log"
+
+    with open(dir, "w") as f:
+        f.write(f"generation_time: {generation_time:.2f}s\n")
+        f.write(f"chars_count: {totalChars}\n")
+        f.write(f"speed: {SPEED}\n")
+        f.write(f"max_concurrency: {MAX_CONCURRENCY}\n")
+
+def _process_sentence(speaker_instance, speaker_name, prefix, i, sentence, length):
     try:
         if not sentence.strip():
             return f"[skip] Empty sentence at {i}"
 
-        dir = f"audios/{prefix}"
+        dir = f"{OUTPUT_FOLDER}/{prefix}"
         os.makedirs(dir, exist_ok=True)
 
         base_filename = f"{dir}/{i:06d}"        
@@ -31,28 +45,36 @@ def _process_sentence(speaker, speaker_name, prefix, i, sentence, length):
         translated_file = f"{base_filename}_1_pt.mp3"
         translated = translator.translate(sentence)
         with lock:
-            status_translated = speaker.generate_tts(translated, translated_file, 'pt', speaker_path, SPEED, SILENCE_PT_LEFT, SILENCE_PT_RIGHT)
+            status_translated = speaker_instance.generate_tts(translated, translated_file, 'pt', speaker_path, SPEED, SILENCE_PT_LEFT, SILENCE_PT_RIGHT)
         mp3.add_lyrics(translated_file, translated, 'por')
         mp3.add_metadata(translated_file, title=translated, album=prefix, track=i*2-1) 
 
         # Main audio
         main_file = f"{base_filename}_2_en.mp3"
         with lock:
-            status_main = speaker.generate_tts(sentence, main_file, 'en', speaker_path, SPEED,  SILENCE_EN_LEFT, SILENCE_EN_RIGHT)
+            status_main = speaker_instance.generate_tts(sentence, main_file, 'en', speaker_path, SPEED,  SILENCE_EN_LEFT, SILENCE_EN_RIGHT)
         mp3.add_lyrics(main_file, sentence)
         mp3.add_metadata(main_file, title=sentence, album=prefix, track=i*2) 
 
-        return f"[done] prefix={prefix} progress={i}/{length} status=({status_translated}, {status_main})"
+        charCount = len(translated) + len(sentence)
+        return f"[done] prefix={prefix} progress={i}/{length} status=({status_translated}, {status_main})", charCount
     except Exception as e:
-        return f"[error] Phrase {i+1} '{sentence}': {e}"
+        return f"[error] Phrase {i+1} '{sentence}': {e}", 0
 
 def _process_all(prefix, sentences, speaker_name):
+    start = time.time()
+    totalChars = 0
+
     speaker = Speaker()
 
     with ThreadPoolExecutor(max_workers=MAX_CONCURRENCY) as executor:
         futures = [executor.submit(_process_sentence, speaker, speaker_name, prefix, i+1, s, len(sentences)) for i, s in enumerate(sentences)]
         for future in as_completed(futures):
-            print(future.result())
+            output, charCount = future.result()
+            totalChars+=charCount
+            print(output)
+            
+    write_performance(start, prefix, totalChars)
 
 def _process_text(text, prefix, speaker_name):
     sentences = splitter.split_text_advanced(text)

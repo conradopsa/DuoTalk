@@ -22,6 +22,7 @@ class Speaker:
         self.tts = TTS().from_pretrained(
             "AstraMindAI/xttsv2", 
             gpt_model='AstraMindAI/xtts2-gpt', 
+            
             # max_concurrency=1,
             # max_seq_len_to_capture=1024, 
             # device="gpu"           
@@ -66,6 +67,9 @@ class Speaker:
                 language=lang,
                 repetition_penalty=6.0,
                 length_penalty=0.5,
+                enhance_speech=True,
+                top_p=0.9,
+                temperature=0.8
 
                 # num_beams=6
             )

@@ -24,6 +24,7 @@ conda create --name duotalk python=3.11
 conda activate duotalk
 
 # 2. Install dependencies
+conda install -c conda-forge libstdcxx-ng
 pip install -r requirements.txt
 
 # 3. Run (needs CUDA GPU)

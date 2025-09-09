@@ -11,19 +11,12 @@ from .silence_detector import remove_ending_silence
 class Speaker:
     def __init__(self):
         print("---------------------- INIT ----------------------")
-        # # Initialize once when creating the instance
-        # torch.serialization.add_safe_globals([
-        #     'TTS.tts.configs.xtts_config.XttsConfig'
-        # ])
-        # self.device = "cuda" if torch.cuda.is_available() else "cpu"
 
-        # print(TTS().list_models())
-
-        print(f"🔍 DIAGNÓSTICO DO SISTEMA:")
+        print(f"🔍 SYSTEM DIAGNOSTIC:")
         print(f"GPU: {torch.cuda.get_device_name(0)}")
-        print(f"VRAM Total: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f}GB")
-        print(f"RAM Total: {psutil.virtual_memory().total / 1024**3:.1f}GB")
-        print(f"RAM Disponível: {psutil.virtual_memory().available / 1024**3:.1f}GB")
+        print(f"Total VRAM: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f}GB")
+        print(f"Total RAM: {psutil.virtual_memory().total / 1024**3:.1f}GB")
+        print(f"Available RAM: {psutil.virtual_memory().available / 1024**3:.1f}GB")
         print(f"Swap: {psutil.swap_memory().total / 1024**3:.1f}GB")
 
         self.tts = TTS().from_pretrained(
@@ -41,7 +34,7 @@ class Speaker:
             return "skipped"
 
         if not text.strip():
-            raise ValueError("Empty text provided to Tortoise TTS.")
+            raise ValueError("Empty text provided")
         
         # fixing xtts model bug in portuguese (model speak "ponto" on the final of every speak)
         if lang == "pt" and text.endswith('.'):
@@ -73,6 +66,7 @@ class Speaker:
                 language=lang,
                 repetition_penalty=6.0,
                 length_penalty=0.5,
+
                 # num_beams=6
             )
 
@@ -94,8 +88,6 @@ class Speaker:
 
             # Convert WAV to MP3 and Adding silence to fhe final
             (silence_left_audio + audioCleaned + silence_right_audio).export(filename, format="mp3")
-
-            print("filename filename filename "+ filename)
             
             # Clean up temporary file
             os.unlink(wav_filename)

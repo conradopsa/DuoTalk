@@ -18,13 +18,16 @@ OUTPUT_FOLDER = "audios"
 
 lock = Lock()
 
-def write_time_logs(start, prefix):
+def write_performance(start, prefix, totalChars):
     generation_time = time.time() - start
 
-    dir = f"{OUTPUT_FOLDER}/{prefix}/time_logs.txt"
+    dir = f"{OUTPUT_FOLDER}/{prefix}/performance.log"
 
     with open(dir, "w") as f:
-        f.write(f"generation_time: {generation_time:.2f}s")  
+        f.write(f"generation_time: {generation_time:.2f}s\n")
+        f.write(f"chars_count: {totalChars}\n")
+        f.write(f"speed: {SPEED}\n")
+        f.write(f"max_concurrency: {MAX_CONCURRENCY}\n")
 
 def _process_sentence(speaker_instance, speaker_name, prefix, i, sentence, length):
     try:
@@ -53,19 +56,25 @@ def _process_sentence(speaker_instance, speaker_name, prefix, i, sentence, lengt
         mp3.add_lyrics(main_file, sentence)
         mp3.add_metadata(main_file, title=sentence, album=prefix, track=i*2) 
 
-        return f"[done] prefix={prefix} progress={i}/{length} status=({status_translated}, {status_main})"
+        charCount = len(translated) + len(sentence)
+        return f"[done] prefix={prefix} progress={i}/{length} status=({status_translated}, {status_main})", charCount
     except Exception as e:
         return f"[error] Phrase {i+1} '{sentence}': {e}"
 
 def _process_all(prefix, sentences, speaker_name):
     start = time.time()
+    totalChars = 0
+
     speaker = Speaker()
 
     with ThreadPoolExecutor(max_workers=MAX_CONCURRENCY) as executor:
         futures = [executor.submit(_process_sentence, speaker, speaker_name, prefix, i+1, s, len(sentences)) for i, s in enumerate(sentences)]
         for future in as_completed(futures):
-            print(future.result())
-    write_time_logs(start, prefix)
+            output, charCount = future.result()
+            totalChars+=charCount
+            print(output)
+
+    write_performance(start, prefix, totalChars)
 
 def _process_text(text, prefix, speaker_name):
     sentences = splitter.split_text_advanced(text)

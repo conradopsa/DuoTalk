@@ -9,3 +9,4 @@ torchaudio==2.5.1
 tts
 transformers==4.42.0
 backoff
+auralis==0.2.8

@@ -1,11 +1,8 @@
+auralis
 deep-translator==1.11.4
-en_core_web_sm-3.8.0-py3-none-any.whl
 mutagen==1.47.0
-spacy==3.8.5
-pydub
+pydub==0.25.1
 torch==2.5.1 
-torchvision==0.20.1 
-torchaudio==2.5.1
-tts
-transformers==4.42.0
-backoff
+backoff==2.2
+conda-forge 
+libstdcxx-ng

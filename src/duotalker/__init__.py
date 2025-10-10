@@ -74,6 +74,7 @@ def _process_all(prefix, sentences, speaker_name):
             totalChars+=charCount
             print(output)
             
+
     write_performance(start, prefix, totalChars)
 
 def _process_text(text, prefix, speaker_name):

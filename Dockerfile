@@ -27,13 +27,13 @@ RUN pip config set global.timeout 120 \
     && pip config set global.extra-index-url "https://pypi.tuna.tsinghua.edu.cn/simple/" \
     && pip config set global.trusted-host "pypi.org pypi.tuna.tsinghua.edu.cn"
 
-RUN conda create --name duotalk python=3.12 -y \
+RUN conda create --name duovox python=3.12 -y \
     && conda activate tortoise \
     && git clone https://github.com/archwesome/XTTS-v2.git XTTS-v2 \
     && RUN make install
 
 RUN cd ./XTTS-v2 \
-    && conda activate duotalk
+    && conda activate duovox
 
 ENTRYPOINT ["tts"]
 CMD ["--help"]

@@ -1,4 +1,4 @@
-# DuoTalk
+# Open DuoVox
 
 ## Best Usage on Android
 
@@ -20,8 +20,8 @@ Use [Lollypop](https://wiki.gnome.org/Apps/Lollypop) Player and activate Lyrics.
 ## Getting Started
 ``` shell
 # 1. Create and/or activate env with python 3.11
-conda create --name duotalk python=3.11
-conda activate duotalk
+conda create --name duovox python=3.11
+conda activate duovox
 
 # 2. Install dependencies
 conda install -c conda-forge libstdcxx-ng

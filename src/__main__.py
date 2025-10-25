@@ -1,5 +1,5 @@
 import argparse
-import duotalker
+import open_duovox
 
 SPEAKER_DEFAULT = "atlas" # "gaia" | "atlas" | "uranos"
 
@@ -19,7 +19,7 @@ def main():
     filepath = args.filepath
     speaker_name = args.speaker
 
-    duotalker.start_from_file(filepath, speaker_name)
+    open_duovox.start_from_file(filepath, speaker_name)
 
 
 main()

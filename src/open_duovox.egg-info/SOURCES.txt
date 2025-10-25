@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+src/__main__.py
+src/open_duovox/__init__.py
+src/open_duovox/mp3.py
+src/open_duovox/silence_detector.py
+src/open_duovox/speaker.py
+src/open_duovox/splitter.py
+src/open_duovox/translator.py
+src/open_duovox.egg-info/PKG-INFO
+src/open_duovox.egg-info/SOURCES.txt
+src/open_duovox.egg-info/dependency_links.txt
+src/open_duovox.egg-info/top_level.txt
+tests/test_splitter.py

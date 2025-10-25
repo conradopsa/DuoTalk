@@ -3,6 +3,6 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "duotalker"
+name = "open_duovox"
 version = "0.1.0"
 dependencies = []

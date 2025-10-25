@@ -2,7 +2,7 @@ from mutagen.easyid3 import EasyID3
 from mutagen.mp3 import MP3
 from mutagen.id3 import ID3, USLT, ID3NoHeaderError
 
-ARTIST="DuoTalk"
+ARTIST="DuoVox"
 MAX_TRACK_NUM=200
 
 def add_metadata(filename, title, album, track):

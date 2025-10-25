@@ -1,7 +1,7 @@
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from .speaker import Speaker
-from duotalker import splitter, translator, mp3
+from open_duovox import splitter, translator, mp3
 from threading import Lock
 import time
 

@@ -10,7 +10,7 @@ from .silence_detector import remove_ending_silence
 
 class Speaker:
     def __init__(self):
-        print("---------------------- INIT ----------------------")
+        print("---------------------- Speaker INIT ----------------------")
 
         print(f"🔍 SYSTEM DIAGNOSTIC:")
         print(f"GPU: {torch.cuda.get_device_name(0)}")
@@ -28,9 +28,11 @@ class Speaker:
             # device="gpu"           
         )
 
-        print("---------------------- INITIATE ----------------------")
+        print("---------------------- Speaker INITIATED ----------------------")
 
-    def generate_tts(self, text, filename, lang, speaker, speed, silence_left, silence_right):
+    def generate_tts(self, text, filename, lang, speaker, speed, silence_left, silence_right):        
+        print("---------------------- Speaker generate_tts INIT ----------------------")
+        
         if os.path.isfile(filename):
             return "skipped"
 

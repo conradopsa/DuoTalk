@@ -29,7 +29,7 @@ def write_performance(start, prefix, totalChars):
         f.write(f"speed: {SPEED}\n")
         f.write(f"max_concurrency: {MAX_CONCURRENCY}\n")
 
-def _process_sentence(speaker_instance, speaker_name, prefix, i, sentence, length):
+def _process_sentence(speaker_instance: speaker.Speaker, speaker_name, prefix, i, sentence, length):
     try:
         if not sentence.strip():
             return f"[skip] Empty sentence at {i}"
@@ -61,11 +61,20 @@ def _process_sentence(speaker_instance, speaker_name, prefix, i, sentence, lengt
     except Exception as e:
         return f"[error] Phrase {i+1} '{sentence}': {e}", 0
 
+
+_speaker_instance = None
+
+def get_speaker():
+    global _speaker_instance
+    if _speaker_instance is None:
+        _speaker_instance = Speaker()
+    return _speaker_instance
+
 def _process_all(prefix, sentences, speaker_name):
     start = time.time()
     totalChars = 0
 
-    speaker = Speaker()
+    speaker = get_speaker()
 
     with ThreadPoolExecutor(max_workers=MAX_CONCURRENCY) as executor:
         futures = [executor.submit(_process_sentence, speaker, speaker_name, prefix, i+1, s, len(sentences)) for i, s in enumerate(sentences)]
